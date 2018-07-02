@@ -1,0 +1,169 @@
+.main_slide {
+  width: 100%;
+  position: relative;
+  background: url_css('img/mac.png') no-repeat;
+  background-size: cover;
+  height: rem(630px);
+  z-index: 50;
+  .slide_bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+  }
+}
+
+.slide_content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.slide_element {
+  position: absolute;
+  max-width: rem(650px);
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  padding-top: rem(50px);
+  opacity: 0;
+  h2 {
+    position: relative;
+    text-align: center;
+    color: #ffffff;
+    font: 900 rem(45px)/1.2 'Montserrat';
+    margin-bottom: rem(35px);
+    opacity: 0;
+    -webkit-transform: scale(.7);
+    transform: scale(.7);
+    -webkit-transition: .5s .4s;
+    transition: .5s .4s;
+  }
+  p {
+    position: relative;
+    -webkit-transform: scale(.7);
+    transform: scale(.7);
+    opacity: 0;
+    color: #ffffff;
+    text-align: center;
+    font: 400 rem(18px)/1.2 'Montserrat';
+    margin-bottom: rem(35px);
+    -webkit-transition: .5s .7s;
+    transition: .5s .7s;
+  }
+  .main_btn {
+    -ms-flex-item-align: center;
+    align-self: center;
+    top: rem(30px);
+    opacity: 0;
+    -webkit-transition: opacity .5s .9s, top .5s .9s, background-color .5s ease-in, color .5s ease-in, -webkit-box-shadow .5s ease-in;
+    transition: opacity .5s .9s, top .5s .9s, background-color .5s ease-in, color .5s ease-in, -webkit-box-shadow .5s ease-in;
+    transition: opacity .5s .9s, top .5s .9s, background-color .5s ease-in, color .5s ease-in, box-shadow .5s ease-in;
+    transition: opacity .5s .9s, top .5s .9s, background-color .5s ease-in, color .5s ease-in, box-shadow .5s ease-in, -webkit-box-shadow .5s ease-in;
+  }
+  &.active {
+    opacity: 1;
+    z-index: 1;
+    position: relative;
+    h2 {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+    p {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+    }
+    .main_btn {
+      top: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.slide_control {
+  position: absolute;
+  z-index: 30;
+  top: 50%;
+  //transform: translateY(-50%);
+  width: rem(36px);
+  height: rem(36px);
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#c17bb1), to(#f9c1da));
+  background-image: linear-gradient(to top, #c17bb1 0%, #f9c1da 100%);
+  opacity: 0.3;
+  border-radius: 50%;
+  color: #ffffff;
+  font-size: rem(18px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+  border: 0;
+  cursor: pointer;
+  &:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+.left_slide {
+  left: 10%;
+}
+
+.right_slide {
+  right: 10%;
+}
+
+.dots_slider {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  left: 50%;
+  bottom: 12%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  .dots {
+    margin-left: rem(5px);
+    width: rem(4px);
+    height: rem(15px);
+    border-radius: rem(2px);
+    background-image: -webkit-gradient(linear, left bottom, left top, from(#c17bb1), to(#f9c1da));
+    background-image: linear-gradient(to top, #c17bb1 0%, #f9c1da 100%);
+    opacity: 0.3;
+    -webkit-transition: .5s;
+    transition: .5s;
+    &:hover, &.active {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+      opacity: 1;
+    }
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}

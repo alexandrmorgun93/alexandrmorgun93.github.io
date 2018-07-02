@@ -1,0 +1,35 @@
+.top_content {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+  background: url_css('img/main_sp_verstka_bg_header.png') no-repeat;
+  background-position: center;
+  background-size: cover;
+  .main_container {
+    padding: rem(50px) 0 rem(100px);
+  }
+}
+
+.sp_text {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  p {
+    position: relative;
+    left: rem(-160px);
+    text-shadow: rem(46px) rem(39px) rem(130px) rgba(11, 15, 57, 0.2);
+    color: #431e72;
+    text-transform: uppercase;
+    font: 900 rem(700px)/1 'Montserrat';
+    &::before {
+      position: absolute;
+      display: block;
+      content: 'p';
+      right: rem(-307px);
+      top: rem(173px);
+      z-index: -1;
+    }
+  }
+}

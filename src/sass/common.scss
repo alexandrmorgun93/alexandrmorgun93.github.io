@@ -1,0 +1,75 @@
+html {
+  font-size: 0.8334vw;
+}
+
+.wrapper {
+  overflow: hidden;
+  background-color: #f3f3f3;
+}
+
+.main_container {
+  max-width: rem(1160px);
+  width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+.main_btn {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: rem(263px);
+  height: rem(50px);
+  border-radius: rem(25px);
+  border: rem(2px) solid #fe6c8a;
+  background-color: transparent;
+  color: #fe6c8a;
+  font: 700 rem(16px)/1 'Montserrat';
+  overflow: hidden;
+  cursor: pointer;
+  -webkit-transition: background-color .5s ease-in, color .5s ease-in, -webkit-box-shadow .5s ease-in;
+  transition: background-color .5s ease-in, color .5s ease-in, -webkit-box-shadow .5s ease-in;
+  transition: background-color .5s ease-in, color .5s ease-in, box-shadow .5s ease-in;
+  transition: background-color .5s ease-in, color .5s ease-in, box-shadow .5s ease-in, -webkit-box-shadow .5s ease-in;
+  z-index: 2;
+  &:hover {
+    color: #ffffff;
+    -webkit-box-shadow: 0 0 rem(70px) rgba(254, 97, 146, 0.7);
+            box-shadow: 0 0 rem(70px) rgba(254, 97, 146, 0.7);
+    background-color: #fe6c8a;
+  }
+}
+
+.main_title {
+  text-align: center;
+  position: relative;
+  text-shadow: rem(38px) rem(32px) rem(40px) rgba(11, 15, 57, 0.4);
+  color: #514269;
+  font: 900 rem(48px)/1 'Montserrat';
+  span {
+    position: absolute;
+    font-size: rem(80px);
+    opacity: 0.1;
+    display: block;
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+    line-height: .9;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  i {
+    font-style: normal;
+  }
+}
+
+.slick-arrow {
+  font-size: rem(18px);
+  color: #ffffff;
+}
